@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 200vh;
+  overflow-x: hidden;
+  background: linear-gradient(#0b0c10, #1f2833);
+  color: white;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax img {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+#stars {
+  z-index: 1;
+  top: 0;
+}
+
+#moon {
+  z-index: 2;
+  top: 10%;
+  width: 40%;
+  left: 30%;
+}
+
+#text {
+  z-index: 3;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#mountains {
+  z-index: 4;
+  bottom: 0;
+}
+
+.content {
+  position: relative;
+  padding: 50px;
+  background-color: #1f2833;
+  z-index: 5;
+}
