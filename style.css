@@ -5,56 +5,98 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   height: 200vh;
+  background: linear-gradient(to bottom, #000011, #000033);
   overflow-x: hidden;
-  background: linear-gradient(#0b0c10, #1f2833);
   color: white;
 }
 
 .parallax {
   position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
 }
 
-.parallax img {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-}
-
+/* ベース背景 */
 #stars {
-  z-index: 1;
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-#moon {
-  z-index: 2;
-  top: 10%;
-  width: 40%;
-  left: 30%;
-}
-
-#text {
-  z-index: 3;
+/* 惑星レイヤー1 */
+#planet1 {
   position: absolute;
   top: 30%;
   left: 10%;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
+  width: 20%;
+  z-index: 2;
 }
 
-#mountains {
+/* 惑星レイヤー2 */
+#planet2 {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 15%;
+  z-index: 3;
+}
+
+/* 隕石 */
+#meteor {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  width: 10%;
   z-index: 4;
-  bottom: 0;
 }
 
+/* 宇宙船 */
+#spaceship {
+  position: absolute;
+  top: 60%;
+  left: -25%;
+  width: 18%;
+  z-index: 5;
+}
+
+/* 宇宙飛行士（前景） */
+#astronaut {
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  width: 12%;
+  z-index: 6;
+}
+
+/* タイトル */
+#text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-size: 3rem;
+  z-index: 7;
+  color: white;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* 下部セクション */
 .content {
   position: relative;
-  padding: 50px;
-  background-color: #1f2833;
-  z-index: 5;
+  padding: 60px 40px;
+  background-color: #111222;
+  z-index: 10;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
